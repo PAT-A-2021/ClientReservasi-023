@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.
 using System.Windows.Forms;
 
 
@@ -61,7 +60,7 @@ namespace ClientReservasi_023
             int JumlahPemesanan = int.Parse(textBoxJumlah.Text);
             string IdLokasi = textBoxIDLokasi.Text;
 
-            var a = service.Pemesanan(IDPemesanan, NamaCustomer, NoTelpon, JumlahPemesanan, IdLokasi);
+            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelpon, JumlahPemesanan, IdLokasi);
             MessageBox.Show(a);
             TampilData();
             Clear();
@@ -122,7 +121,7 @@ namespace ClientReservasi_023
             textBoxNama.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             textBoxNotlf.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             textBoxJumlah.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
-            textBoxIDLokasi.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
+                textBoxIDLokasi.Text = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
 
             textBoxJumlah.Enabled = false;
             textBoxIDLokasi.Enabled = false;
